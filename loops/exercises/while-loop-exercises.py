@@ -6,39 +6,46 @@ altitude = 0
 num_astro  = 0
 testastro = 0
 testnumfuel = 0
+fuel_question = "What is the starting fuel level?  "
+astro_question = "How many astronauts are aboard?  "
 
 # Exercise #1: Construct while loops to do the following:
   # a. Query the user for the starting fuel level. Validate that the user enters a positive, integer value greater than 5000 but less than 30000. 
-start_fuel =int(input("What is starting fuel level?  "))
+start_fuel =float(input(fuel_question))
 
 
 while testnumfuel == 0:
   if start_fuel <5000:
     print("Fuel level too low! Fuel level must be above 5,000 kg.")
-    start_fuel =int(input("What is starting fuel level?  "))
+    start_fuel =float(input(fuel_question))
   elif start_fuel > 30_000:
     print("Fuel level too high! Fuel must be under 30,000 kg.")
-    start_fuel =int(input("What is starting fuel level?  "))
+    start_fuel =float(input(fuel_question))
   else:
     testnumfuel += 1
 
 
 
 # b. Use a second loop to query the user for the number of astronauts (up to a maximum of 7). Validate the entry.
-  
-num_astro = int(input("How many astronauts are aboard?  "))
+num_astro = float(input(astro_question))
 
 while testastro == 0:
-    if num_astro > 7:
-      print("Too many Astronauts! Remove someone from the mission. Max Astronauts = 7.")
-      num_astro = int(input("How many astronauts are aboard? (Remember 7 or less!)  "))
-    elif num_astro <= 0:
-      print("This is not an unmanned mission. Please enter at least 1 crew member!")
-      num_astro = int(input("How many astronauts are aboard, there must atleast be 1 astronaut for the mission to succeed.  "))
-    else:
-      testastro += 1
+  if num_astro%1 != 0:
+    print("There are no partial people. Number must be a whole number!")
+    num_astro = float(input(astro_question))
+  elif num_astro > 7:
+     print("Too many Astronauts! Remove someone from the mission. Max Astronauts = 7.")
+     num_astro = float(input(astro_question))
+  elif num_astro <= 0:
+     print("This is not an unmanned mission. Please enter at least 1 crew member!")
+     num_astro = float(input(astro_question))
+  else:
+     int(num_astro)
+     testastro += 1
+
+       
   
-  
+
   
 # c. Use a final loop to monitor the fuel status and the altitude of the shuttle. Each iteration, decrease the fuel level by 100 units for each astronaut aboard. Also, increase the altitude by 50 kilometers.
 
