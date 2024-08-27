@@ -8,19 +8,25 @@ testastro = 0
 testnumfuel = 0
 fuel_question = "What is the starting fuel level?  "
 astro_question = "How many astronauts are aboard?  "
+extry =1
 
 # Exercise #1: Construct while loops to do the following:
   # a. Query the user for the starting fuel level. Validate that the user enters a positive, integer value greater than 5000 but less than 30000. 
-start_fuel =float(input(fuel_question))
+while extry == 1:
+  try:
+    start_fuel =float(input(fuel_question))
+    extry = 0
+  except:
+    print("Needs to be a number.")
+    extry = 1
 
 
 while testnumfuel == 0:
-  if start_fuel <5000:
+  start_fuel =float(input(fuel_question))
+  if start_fuel <5001:
     print("Fuel level too low! Fuel level must be above 5,000 kg.")
-    start_fuel =float(input(fuel_question))
-  elif start_fuel > 30_000:
+  elif start_fuel > 29_999:
     print("Fuel level too high! Fuel must be under 30,000 kg.")
-    start_fuel =float(input(fuel_question))
   else:
     testnumfuel += 1
 
@@ -57,7 +63,7 @@ while testastro == 0:
 # Exercise #2: Print the result with the phrase, The shuttle gained an altitude of ___ km and has ___ kg of fuel left. Fill in the blanks with the altitude and fuel level values.
 # If the altitude is 2000 km or higher, add “Orbit achieved!” Otherwise add, “Failed to reach orbit.”
 
-while start_fuel >99 * num_astro:
+while start_fuel >99 * num_astro and altitude < 2000:
   altitude += 50
   start_fuel -= 100 * num_astro
 

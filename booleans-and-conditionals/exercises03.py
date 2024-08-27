@@ -32,7 +32,7 @@ elif fuel_level <= 5_000 or engine_temperature > 2500:
 elif fuel_level > 5_000 and engine_temperature <= 2500:
     print("Fuel level above 25%. Engines good.")
 elif fuel_level > 10_000 and engine_temperature <= 2500:
-    print("Fuel level is above 50. Engines good.")
+    print("Fuel level is above 50%. Engines good.")
 elif fuel_level > 20_000 and engine_temperature <= 2500:
     print("Full tank. Engines good.")
 else:
