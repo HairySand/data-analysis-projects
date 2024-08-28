@@ -48,7 +48,7 @@ if command_override != True:
     else:
         print('Not ready for launch. Check Fuel and/or engine.')
 else:
-    print("Launching regardless or fuel and/or engine status.")
+    print("Launching regardless of fuel and/or engine status.")
 
 
 # 6) b) Code the following if/else check:

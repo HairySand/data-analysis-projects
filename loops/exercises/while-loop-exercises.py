@@ -22,11 +22,12 @@ while extry == 1:
 
 
 while testnumfuel == 0:
-  start_fuel =float(input(fuel_question))
   if start_fuel <5001:
     print("Fuel level too low! Fuel level must be above 5,000 kg.")
+    start_fuel =float(input(fuel_question))
   elif start_fuel > 29_999:
     print("Fuel level too high! Fuel must be under 30,000 kg.")
+    start_fuel =float(input(fuel_question))
   else:
     testnumfuel += 1
 
