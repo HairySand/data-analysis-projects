@@ -45,7 +45,7 @@ word = 'tomato'
 
 # 1
 max_index = len(word) -1 
-for index in range(5, -1, -1):
+for index in range(max_index, -1, -1):
    print(word[index])
 
 # 2

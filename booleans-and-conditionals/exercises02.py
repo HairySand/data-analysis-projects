@@ -4,6 +4,9 @@ shuttle_cabin_ready = True
 crew_status = space_suits_on and shuttle_cabin_ready
 computer_status_code = 200
 shuttle_speed = 15000
+crew_status = space_suits_on and shuttle_cabin_ready
+computer_status_code = 200
+shuttle_speed = 15000
 
 # 3) Write conditional expressions to satisfy the following safety rules:
 
