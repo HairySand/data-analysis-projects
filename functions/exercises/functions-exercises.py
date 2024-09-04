@@ -6,7 +6,7 @@ def make_line(size):
 
 # print(make_line(7)) # test for above
 
-# Part 1 B -- Make a Square
+# Part 1 B -- Make a Square 
 # create a function using your make_line function to code a square
 
 # First iteration of Make a Square
@@ -58,8 +58,8 @@ def make_isosceles_triangle(height):
 def make_diamond(height):
    diamond = ""
    triangle = make_isosceles_triangle(height)
-   diamond += triangle[:-1]
-   for i in range(len(triangle)-1, -1, -1):
+   diamond = triangle[:-1]
+   for i in range(len(triangle)-1, 0, -1):
       diamond += triangle[i]
    return diamond
 

@@ -7,6 +7,33 @@
 # e) Create a variable of type string to test your new function. # f) Use 'print(reverse_characters(my_variable_name))'; to call the function and verify that it correctly reverses the characters in the string.
 # g) Use method chaining to reduce the lines of code within the function.
 
+def reverse_characters(chars):
+    if type(chars) == str:
+        chars = list(chars)
+        rev_chars = chars[::-1]
+        chars = "".join(rev_chars)
+        return chars
+    elif type(chars) == int:
+        chars = str(chars)
+        chars = list(chars)
+        rev_chars = chars[::-1]
+        chars = "".join(rev_chars)
+        chars = int(chars)
+        return chars
+    elif type(chars) == float:
+        chars = str(chars)
+        chars = list(chars)
+        rev_chars = chars[::-1]
+        chars = "".join(rev_chars)
+        chars = float(chars)
+        return chars
+    elif type(chars) == bool:
+        return not chars
+    
+print(reverse_characters(0.888))
+
+
+
 
 
 # 2) The 'split' method does not work on numbers, but we want the function to return a number with all the digits reversed (e.g. 1234 converts to 4321 and NOT the string "4321")
@@ -23,7 +50,17 @@
 # f) Be sure to print the results from each test case in order to verify your code.
 
 
+def double_rev_list(list_to_reverse):
+    reversed_list = list_to_reverse[::-1]
+    for i in range(len(reversed_list)):
+        reversed_list[i] = reverse_characters(reversed_list[i])
+    return reversed_list
+
+
+
 
 list_test1 = ['apple', 'potato', 'Capitalized Words']
 list_test2 = [123, 8897, 42, 1168, 8675309]
 list_test3 = ['hello', 'world', 123, 'orange']
+
+print(double_rev_list(list_test3))
