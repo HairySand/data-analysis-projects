@@ -56,7 +56,7 @@ def make_isosceles_triangle(height):
 
 # Part 3 -- Make a Diamond
 def make_diamond(height):
-   diamond = ""
+   diamond = ""+-7
    triangle = make_isosceles_triangle(height)
    diamond = triangle[:-1]
    for i in range(len(triangle)-1, 0, -1):

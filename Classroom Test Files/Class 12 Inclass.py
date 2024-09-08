@@ -36,33 +36,29 @@ def reverse_characters(chars):
 
 print(reverse_characters(True))
 
-def rev_rev_list(rlist):
+def double_rev_list(rlist):
     rev_list = rlist[::-1]
     for i in range(len(rev_list)):
         rev_list[i] = reverse_characters(rev_list[i])
     return rev_list
 
 
-print(rev_rev_list(["Hello", "Brief", 542]))
+print(double_rev_list(["Hello", "Brief", 542]))
 
 
 
-def add_num_together(num = 100):
-    total = 0
-    while num < 100:
-        total += num
-        num += 1
+# def add_num_together(num = 100):
+#     total = 0
+#     while num < 100:
+#         total += num
+#         num += 1
 
-    return total , num
+#     return total , num
     
-print(add_num_together(55))
+# print(add_num_together(55))
 
 
-def pass_the_point_of_return():
-    return "I'm done."
-    print("THis will not be printed")
 
-print(pass_the_point_of_return())
 
 
 
